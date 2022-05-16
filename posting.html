@@ -23,25 +23,25 @@
             display: flex;
             border-bottom: 2px solid #eee;
         }
-
+        
         #logo {
             margin-top: 30px;
             width: 150px;
             height: 60px;
         }
-
+        
         header h1 {
-            text-align: center;
-            margin: 20px 0 10px 300px;
             padding: 1rem;
             font-size: 35px;
+            display: flex;
+            text-align: center;
+            margin: 20px 350px;
         }
 
         #group {
             margin: 20px;
             width: 70px;
             height: 50px;
-            margin-left: 300px;
             float: right;
         }
 
@@ -51,7 +51,7 @@
             height: 50px;
             float: right;
         }
-
+        
         #mypage {
             margin: 20px;
             width: 70px;
@@ -61,16 +61,16 @@
 
         ul {
             list-style: none;
-            margin: 0 10px;
+            margin: 0 20px;
             padding: 0;
             display: inline-block;
         }
-
+        
         #tab ul {
-            width: 100%;
+            width: 90%;
             height: 50px;
             line-height: 50px;
-            border-bottom: 1px solid #0670b9;
+            border-bottom: 1px solid #eee;
             height: 50px;
             box-sizing: border-box;
         }
@@ -78,7 +78,7 @@
         #tab ul li {
             float: left;
             width: 100px;
-            border: 1px solid #aaa;
+            border: 1px solid black;
             text-align: center;
             border-bottom: none;
             font-weight: bold;
@@ -90,15 +90,16 @@
         }
 
         #tab ul li.on {
-            border: 1px solid #0670b9;
+            border: 1px solid black;
             border-bottom: 1px solid #fff;
             font-weight: bold;
-            color: #0670b9;
+            color: black;
         }
 
         #search {
-            height: 36px;
-            margin-top: 30px;
+            height: 20px;
+            margin-top: 10px;
+            width: 90%;
         }
 
         #search div {
@@ -129,23 +130,22 @@
         }
 
         #search input[type=button] {
-            background-color: #0670b9;
+            background-color: #727475;
             height: 36px;
-            border: 1px solid #0670b9;
+            border: 1px solid #727475;
             color: #fff;
             padding: 0 20px;
         }
 
         #search a.on {
-            border: 1px solid #0670b9;
-            color: #0670b9;
+            border: 1px solid #000000;
+            color: #000000;
             text-decoration: underline;
         }
 
         #tb-list ul {
-            height: 50px;
-            width: 100%;
-            margin: 0 10px;
+            width: 90%;
+            margin: 0 20px;
         }
 
         #tb-list li:first-child {
@@ -167,6 +167,7 @@
 
         #tb-list table {
             border-collapse: collapse;
+            margin: 0 20px;
         }
 
         #tb-list thead tr {
@@ -191,12 +192,12 @@
             border-top: 1px solid #666;
         }
 
-        #tb-list tbody tr :last-child {
+        #tb-list tbody tr:last-child {
             border-bottom: 1px solid #aaa;
         }
 
         #tb-list tbody td:nth-child(2):hover {
-            color: #0670b9;
+            color: black;
             text-decoration: underline;
             cursor: pointer;
         }
@@ -204,7 +205,8 @@
         #paging {
             line-height: 36px;
             text-align: center;
-            margin: 20px 0;
+            margin: 10px 0;
+            float: auto;
         }
 
         #paging a {
@@ -225,7 +227,33 @@
         #paging a:hover {
             border: 1px solid #0670b9;
         }
+        #messages {
+            margin-left: 20px;
+            width: 100px;
+            height: 60px;
+        }
+        #messages:hover {
+            cursor: pointer;
+        }
+        .make {
+            float: right;
+            margin-right: 80px;
+            padding: 0.07rem;
+        }
     </style>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6280da497b967b11798f6da8/1g33l9cfl';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 </head>
 
 <body>
@@ -249,9 +277,9 @@
     <section>
         <article id='tab'>
             <ul>
-                <li class='on'>공지사항</li>
+                <li class='on'>커뮤니티</li>
                 <li>FAQ</li>
-                <li>커뮤니티</li>
+                <li>공지사항</li>
             </ul>
         </article>
         <article id='search'>
@@ -266,7 +294,6 @@
             <ul>
                 <li>전체</li>
                 <li><a>최신 순</a> <a>댓글 많은 순</a> <a>좋아요 많은 순</a> <a>조회순</a></li>
-
             </ul>
         </article>
         <article id='tb-list'>
@@ -388,8 +415,21 @@
             <a class='on'>3</a> <a>4</a> <a>5</a> <a>6</a> <a>7</a> <a>8</a> <a>9</a>
             <a>10</a> <a class='arrow'><i class="fa-solid fa-angle-right"></i></a>
             <a class='arrow'><i class="fa-solid fa-angles-right"></i></a>
+            <div class="make">
+                <button>글쓰기</button>
+            </div>
         </div>
     </section>
+    <footer>
+        <div>
+            <img id="messages" src="images/messages.png" alt="messages"
+            onclick='window.open("messages.html", "messages", "width=700px, height=500px")'/>
+        </div>
+        <div>
+            <img id="messages" src="images/messages.png" alt="messages"
+            onclick='window.open("messages copy.html", "messages", "width=700px, height=500px")'/>
+        </div>
+    </footer>
 
 </body>
 
